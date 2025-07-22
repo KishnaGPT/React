@@ -1,0 +1,89 @@
+ nav {
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+}
+
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.6);
+} */
+
+
+
+
+nav {
+  display: flex;
+  gap: 20px;
+  background: #111;
+  padding: 15px 30px;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+nav a {
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #ff4e50, #f9d423, #24fe41, #00d2ff, #ff4e50);
+  background-size: 1000% 1000%;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  animation: gradientShift 8s linear infinite;
+}
+
+nav a:hover::before {
+  opacity: 1;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} 
