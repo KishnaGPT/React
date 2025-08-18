@@ -1,0 +1,13 @@
+.blog-container{
+    transition: transform 0.3s ease;
+}
+
+.blog-container:hover{
+    transform: scale(0.8);
+}
+
+.blog-img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
